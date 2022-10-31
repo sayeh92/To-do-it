@@ -1,0 +1,208 @@
+body {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    background-color: #ebdbde;
+    height: 100%;
+
+}
+
+
+.container {
+    width: 400px;
+    margin: auto;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    margin-top: 60px;
+    color: rgb(133, 96, 201);
+    background-color: #69330f;
+    border-radius: 10px;
+
+}
+
+
+#inputField {
+    width: 300px;
+    height: 32px;
+    border: 1px solid rgb(223, 211, 211);
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(23, 100, 167);
+    vertical-align: middle;
+}
+
+#addToDo {
+    height: 44px;
+    width: 40px;
+    border: 1px solid rgb(226, 224, 224);
+    vertical-align: middle;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+
+h1 {
+
+    color: rgb(170, 178, 185);
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    margin: 5px;
+    padding: 10px;
+
+}
+
+.paragraph-styling {
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid rgb(245, 245, 250);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 86%;
+    background-color: rgb(204, 139, 54);
+    color: rgb(8, 8, 8);
+}
+
+.to-dos {
+    margin-top: 5%;
+}
+
+
+
+
+
+.containerToggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    padding: 40px;
+
+}
+
+
+
+.toggle {
+    cursor: pointer;
+}
+
+.toggle .inputHallowen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+}
+
+.background {
+    position: relative;
+    width: 20rem;
+    height: 5rem;
+    border-radius: 5rem;
+    background: rgb(240, 237, 237);
+    border: 2px solid #da5f0b;
+    transition: 0.8s;
+}
+
+.pumpking {
+    z-index: 1;
+    position: absolute;
+    width: 8rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 0.6rem;
+    background: #bb6227;
+    transition: 0.8s;
+}
+
+.eyes {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    height: 1.5rem;
+    width: 8.1rem;
+    top: 12px;
+}
+
+.eye {
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid rgb(46, 34, 34);
+    background: #bb6227;
+}
+
+
+
+.mouth {
+    position: absolute;
+    width: 77px;
+    height: 19px;
+    top: 37px;
+    left: 19px;
+    border-radius: 0 0 30px 30px;
+    background: rgb(180, 16, 16);
+    box-shadow: inset -2px 0 2px 0px #9c4308;
+    transition: 0.8s;
+}
+
+.mouth::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 14px;
+    left: 70%;
+    background-color: #da5f0b;
+    box-shadow: -1px 0 1px 0px #9c4308;
+    transition: 0.8s;
+}
+
+.mouth::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 14px;
+    left: 20%;
+    bottom: 23;
+    background-color: #da5f0b;
+    box-shadow: -1px 0 1px 0px #9c4308;
+    transition: 0.8s;
+}
+
+input:checked~.pumpking {
+    -webkit-transform: translateX(175px);
+    -ms-transform: translateX(175px);
+    transform: translateX(175px);
+}
+
+input:checked~.background {
+    background: #0f0808;
+    border: 2px solid yellow;
+    box-shadow: 0px 0 20px 0px #da5f0b;
+}
+
+input:checked~.pumpking .eyes .eye,
+input:checked~.pumpking .mouth {
+    background: #fad501;
+    box-shadow: inset -6px 0 2px 0px rgb(115, 65, 34);
+}
+
+input:checked~.pumpking .nose {
+    box-shadow: 4px 15px 10px -17px #ffff00;
+}
+
+input:checked~.pumpking .nose::after {
+    background: #ffff00;
+    box-shadow: inset -2px 2px 2px 0px rgb(115, 65, 34);
+}
+
+input:checked~.pumpking .mouth::after,
+input:checked~.pumpking .mouth::before {
+    box-shadow: -1px 0 2px 0px #aa6a0a;
+}
